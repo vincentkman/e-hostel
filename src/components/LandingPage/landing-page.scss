@@ -1,0 +1,20 @@
+@import '../../utilities/mixins'; 
+@import '../../utilities/variables';
+@import '../../utilities/extends';
+
+.landing-page {
+    text-align: center;
+    @include flexbox($just: center, $align: center);
+    &-inner {
+        background: $light-black;
+        padding: 80px 100px;
+        letter-spacing: $letter-space;
+        border-radius: $br--default;
+        &-item {
+            color: $white-smoke;
+            font-size: 50px;
+            letter-spacing: $letter-space;
+        }
+    }
+
+}

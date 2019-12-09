@@ -1,0 +1,12 @@
+@import '../../utilities/mixins.scss';
+@import '../../utilities/variables.scss';
+@import '../../utilities/extends.scss';
+
+.hostels {
+    &-landing-page {
+        @include background($url: '../images/background/beach.jpg');
+    }
+    // &-jumbotron {
+    //     margin: auto 50px;
+    // }
+}

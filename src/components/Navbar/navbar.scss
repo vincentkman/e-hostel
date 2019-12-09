@@ -1,0 +1,65 @@
+@import '../../utilities/mixins'; 
+@import '../../utilities/variables';
+@import '../../utilities/extends';
+
+.navbar {
+    @include fpos($top: 0);
+    width: 100%; 
+    z-index: 1000;
+    @include lin-gradient-cloud(60deg);
+    &-main {
+        z-index: 10;
+        width: 100%;
+        &-icon {
+            // color: $light-blue;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 40px;
+            &-bar {
+                @include mq('medium') {
+                    display: none;
+                }
+            }
+        }
+        &-logo {
+            @include apos($top: 20px);
+            width: 220px;
+        }
+    }
+    &-links {
+        list-style-type: none;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition: $trn; 
+        @include mq('medium') {
+            @include flexbox($just: center);
+            height: 100px;
+            transition: none;
+        }
+        &-item {
+            font-size: 20px;
+            font-weight: $font-weight--bold;
+            color: $light-black;
+            transition: $trn; 
+            margin: 50px 0;
+            padding: 0 20px; 
+            &:hover {
+                color: $strong-blue;
+                text-decoration: none;
+            }
+            @include mq('medium') {
+                display: block;
+            }
+        }        
+    }
+}
+
+.nav-active {
+    color: $strong-blue; 
+}
+
+.show-nav {
+    height: 100px;
+    // transition: $trn; 
+}

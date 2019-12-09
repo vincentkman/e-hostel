@@ -1,0 +1,33 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.hostel-filter {
+    padding: 0 80px;
+    @include mq('medium') {
+        width: 60%;
+        margin: 0 auto;
+        @include grid($gap: 20px, $temp-col: repeat(4, 1fr))
+    }
+    &-item {
+        padding: 15px 0;
+        @include mq('medium') {
+            padding: 0;
+        }
+    }
+    label {
+        font-weight: $font-weight--bold;
+    }
+    input {
+        text-align: center;
+        @extend %input-box-style;
+        width: 30%;
+        margin: 10px;
+    }
+
+    .filter-search {
+        width: 80%;
+        text-align: left;
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.featured-hostels {
+    @extend %center;
+    width: 70%;
+    padding: 60px;
+    @include grid($gap: 20px, $temp-col: repeat(auto-fit, minmax(400px, 1fr)));
+    &-container {
+        @extend %center;
+        padding: 50px;
+    }
+    &-btn {
+        @extend %btn-style;
+    }
+}
