@@ -1,16 +1,14 @@
 import React from 'react';
-import { HostelContext, HostelConsumer } from '../../context';
-import { Link } from 'react-router-dom';
+import { HostelContext } from '../../context';
+import { Link, useParams } from 'react-router-dom';
 import StyledLandingPage from '../../components/styled-components/StyledLandingPage';
 import originalImg from '../../images/background/mountain.jpeg';
 import Loading from '../../components/Loading';
 import './hostel-info.scss';
-import { useParams } from 'react-router-dom';
 
 function HostelInfo() {
     const { id } = useParams();
-    const { hostels, getHostel } = React.useContext(HostelContext);
-    // const hostel = hostels.find(item => item.id === id);
+    const { getHostel } = React.useContext(HostelContext);
     const hostel = getHostel(id);
     if (!hostel) {
         return <Loading />;

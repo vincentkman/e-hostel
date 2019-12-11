@@ -1,6 +1,5 @@
 import React from 'react';
 import LandingPage from '../../components/LandingPage';
-// import { Jumbotron } from 'reactstrap';
 import AllHostels from '../../components/hostel-components/AllHostels';
 import './hostels.scss';
 
@@ -12,8 +11,6 @@ function Hostels() {
             </div>
             <h1 className='title'>Hostels</h1>
             <AllHostels />
-            {/* <Jumbotron className='hostels-jumbotron'>
-            </Jumbotron> */}
         </div>
     )
 }
